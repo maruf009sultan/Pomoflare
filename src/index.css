@@ -1,0 +1,134 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 346 83% 47%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .timer-glow {
+    filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.3));
+  }
+
+  .timer-glow.active {
+    filter: drop-shadow(0 0 30px hsl(var(--primary) / 0.6));
+    animation: timer-pulse 2s ease-in-out infinite;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    background: hsl(var(--card) / 0.8);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .phase-focus {
+    background: linear-gradient(135deg, hsl(346 83% 47% / 0.1), hsl(346 70% 60% / 0.1));
+  }
+
+  .phase-break {
+    background: linear-gradient(135deg, hsl(142 76% 36% / 0.1), hsl(142 70% 50% / 0.1));
+  }
+
+  .phase-long-break {
+    background: linear-gradient(135deg, hsl(217 91% 60% / 0.1), hsl(217 70% 70% / 0.1));
+  }
+}
+
+@keyframes timer-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px hsl(var(--primary) / 0.7));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  .hover-lift {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
