@@ -1,8 +1,7 @@
 # 🔥 Pomoflare — bursts of productivity
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://pomoflare.netlify.app/)
 
-**Live Demo:** [https://pomoflare.netlify.app/](https://pomoflare.netlify.app/)
+**Live Demo:** [https://pomoflare.vercel.app/](https://pomoflare.vercel.app/)
 
 Pomoflare is a modern, feature-rich Pomodoro productivity application designed to help you maximize focus and track your workflow. Built with Vite, React, TypeScript, and the latest UI libraries, Pomoflare empowers you with intuitive controls, beautiful design, and insightful analytics — all in one blazing-fast webapp.
 
@@ -143,7 +142,7 @@ yarn preview
 - **Static Hosting:** Upload `dist/` to your web server.
 
 #### **Live Example:**  
-[https://pomoflare.netlify.app/](https://pomoflare.netlify.app/)
+[https://pomoflare.vercel.app/](https://pomoflare.vercel.app/)
 
 ---
 
