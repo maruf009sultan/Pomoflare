@@ -2,7 +2,7 @@
 
 
 **Live Demo:** [https://pomoflare.vercel.app/](https://pomoflare.vercel.app/)
-
+NOTE: THIS PROJECT HAS SOME BUGS, BUT I DON'T HAVE ENERGY TO FIX THEM ALL.
 Pomoflare is a modern, feature-rich Pomodoro productivity application designed to help you maximize focus and track your workflow. Built with Vite, React, TypeScript, and the latest UI libraries, Pomoflare empowers you with intuitive controls, beautiful design, and insightful analytics — all in one blazing-fast webapp.
 
 ---
